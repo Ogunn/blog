@@ -10,6 +10,9 @@ app.get("/", (req, res, next) => {
   res.send("funcionando");
 });
 
+const routes = require("./routes");
+app.use("/api", routes);
+
 const port = 3001;
 
 app.listen(port, () => {
